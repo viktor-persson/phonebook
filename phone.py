@@ -1,4 +1,4 @@
-def print_meny():
+def print_menu():
     print('1. lista alla nummer')
     print('2. lägg till nummer')
     print('3. ta bort nummer')
@@ -6,34 +6,34 @@ def print_meny():
     print('5. avsluta')
     print()
 
-nummer = {}
-meny_val = 0
-print_meny()
-while meny_val != 5:
-    meny_val = int(input("skriv in nummer (1-5): "))
-    if meny_val == 1:
+numbers = {}
+menu_choice = 0
+print_menu()
+while menu_choice != 5:
+    menu_choice = int(input("skriv in nummer (1-5): "))
+    if menu_choice == 1:
         print("Telefon Nummer:")
-        for x in nummer.keys():
-            print("Namn: ", x, "\tNummer:", nummer[x])
+        for x in numbers.keys():
+            print("Namn: ", x, "\tNummer:", numbers[x])
         print()
-    elif meny_val == 2:
-        print("lägg till namn och nummer")
-        namn = input("Namn: ")
-        telefonnummer = input("Nummer: ")
-        nummer[namn] = telefonnummer
-    elif meny_val == 3:
+    elif menu_choice == 2:
+        print("lägg till name och nummer")
+        name = input("Namn: ")
+        phonenumber = input("Nummer: ")
+        numbers[name] = phonenumber
+    elif menu_choice == 3:
         print("Remove Name and Number")
-        namn = input("Name: ")
-        if namn in nummer:
-            del nummer[namn]
+        name = input("Name: ")
+        if name in numbers:
+            del numbers[name]
         else:
-            print(namn, "hittades inte")
-    elif meny_val == 4:
+            print(name, "hittades inte")
+    elif menu_choice == 4:
         print("kolla upp nummer")
-        namn = input("Namn: ")
-        if namn in nummer:
-            print("nummret är", nummer[namn])
+        name = input("Namn: ")
+        if name in numbers:
+            print("nummret är", numbers[name])
         else:
-            print(namn, "hittades inte")
-    elif meny_val != 5:
-        print_meny()
+            print(name, "hittades inte")
+    elif menu_choice != 5:
+        print_menu()
