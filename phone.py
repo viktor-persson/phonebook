@@ -14,7 +14,7 @@ while meny_val != 5:
     if meny_val == 1:
         print("Telefon Nummer:")
         for x in nummer.keys():
-            print("Namn: ", x, "\tNummer:", numbers[x])
+            print("Namn: ", x, "\tNummer:", nummer[x])
         print()
     elif meny_val == 2:
         print("lägg till namn och nummer")
